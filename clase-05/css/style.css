@@ -1,0 +1,158 @@
+/* 1. Reset y Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Criterio de evaluación: Box Model */
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* 2. Header y Navegación (Mobile First) */
+.main-header {
+    background-color: #cc0000;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 1.8rem; /* Más pequeño en móvil */
+    margin-bottom: 0.5rem;
+}
+
+.navbar {
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Para que no se rompa en pantallas muy chicas */
+    justify-content: center;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* 3. Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.news-content, .form-container {
+    padding: 20px;
+}
+
+/* 4. Elementos de la noticia */
+.image-wrapper {
+    margin: 20px 0;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.highlight-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid #cc0000;
+    padding: 1.5rem;
+    margin: 20px 0;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 3px solid #ccc;
+}
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;       /* Espacio interno para que nada toque el borde */
+    margin-bottom: 25px; /* Espacio entre el primer bloque y el segundo */
+    border-radius: 5px;  /* Opcional: suaviza las esquinas */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;  /* Separa el texto del cuadro de entrada */
+    margin-top: 10px;    /* Separa una pregunta de la anterior */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;       /* Hace que los cuadros sean más altos y fáciles de tocar */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    width: 100%; /* Botón grande en móvil */
+    background-color: #cc0000;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+/* TABLET (Breakpoints típicos de 768px) */
+@media (min-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .news-content {
+        padding: 40px;
+    }
+
+    .btn-submit {
+        width: auto; /* Botón tamaño normal */
+        padding: 10px 30px;
+    }
+}
+
+/* DESKTOP (Breakpoints de 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul li a {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Ejemplo de cambio de layout: texto en dos columnas si quisieras */
+    .text-content {
+        column-count: 1; /* Podrías usar 2 para un look más de diario */
+    }
+}
