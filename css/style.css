@@ -1,0 +1,151 @@
+/* 1. Selector Universal: Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Selector de Etiqueta: Tipografía y fondo */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* 3. Selector de Clase: Header y Títulos */
+.main-header {
+    background-color: #cc0000; /* Rojo característico de noticias */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.author span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 4. Selector de ID y Descendente: Navegación */
+#noticia {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color: #222;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    background-color: #444;
+}
+
+/* 5. Layout y Contenedores */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.image-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 5px solid #cc0000;
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 6. Selectores de Clase específicos */
+.highlight-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid #cc0000;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.quote {
+    display: block;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+}
+
+/* 7. Estilos para el Formulario */
+.form-container {
+    padding: 40px;
+    background-color: #eee;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #a00000;
+}
+
+/* 8. Footer */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
